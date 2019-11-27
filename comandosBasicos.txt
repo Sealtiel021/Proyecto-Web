@@ -1,0 +1,28 @@
+ php artisan migrate:refresh
+ //Toma las migraciones y crea las tablas en la base de datos (migracion == tabla)
+ //REGLAS MODELOS Y migraciones
+    -DEFINIR EL ORDEN DE COMO VA EJECUTAR LAS RELACIONES
+    -1 Nombre del modelo inicia con mayuscula
+    -2 Compuesta no lleva espacio y por cada palabra la primera es mayus ej: TreeHouses
+    -3 El nombre de la tabla es ingles
+    -4 Los pivotes van en minusculas
+    -5 To va en singular
+//-m ademas crea migracion
+php artisan make:model Product -m
+php artisan make:model Vendor -m
+php artisan make:model Type -m
+// crea las relaciones (tablas pibote) ej create_image_product_table_X_X_table
+php artisan make:migration create_producto_vender_table
+
+//Pendiente Controladores
+
+php artisan make:model WorkDetail -m
+php artisan make:model Work -m
+php artisan make:model Invoice -m
+php artisan make:model Provider -m
+php artisan make:migration create_invoice_product_table
+php artisan make:migration create_invoice__table
+php artisan make:model ResourcePublic -m
+php artisan make:migration create_resourcePublic_work
+
+php artisan make:controller ProductController
